@@ -34,4 +34,4 @@ class GroupsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = ('id', 'title', 'slug', 'description', )
+        fields = '__all__'
