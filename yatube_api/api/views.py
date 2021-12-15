@@ -1,12 +1,12 @@
 from django.shortcuts import get_object_or_404
+
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from posts.models import Group, Post, User
-# isort здесь добавляет пустую строку
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer, GroupsSerializer, PostSerializer,
                           UserSerializer)
+from posts.models import Group, Post, User
 
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
